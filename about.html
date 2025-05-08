@@ -1,3 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DavHowis Enterprise</title>
+
+  <!-- ✅ Correct Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header Section -->
+  <header class="w-full shadow-md py-4 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap md:flex-nowrap">
+
+      <!-- Logo / App Name and Mobile Menu Button -->
+      <div class="w-full md:w-auto flex justify-between items-center mb-2 md:mb-0">
+        <h1 class="text-2xl font-bold">
+          <span class="text-blue-900">DavHowis</span>
+          <span class="text-blue-300">Enterprise</span>
+        </h1>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden text-blue-900 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav id="nav-links" class="w-full hidden md:flex md:flex-1 justify-center space-x-4 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-900 block py-2">Home</a>
+        <a href="shop.html" class="hover:text-blue-900 block py-2">Shop</a>
+        <a href="about.html" class="hover:text-blue-900 block py-2">About</a>
+        <a href="#contact" class="hover:text-blue-900 block py-2">Contact</a>
+      </nav>
+
+      <!-- Auth Buttons -->
+      <div class="w-full md:w-auto flex justify-center md:justify-end space-x-3 mt-2 md:mt-0">
+        <a href="/login"
+          class="text-sm px-4 py-2 border border-blue-900 text-blue-900 rounded hover:bg-blue-900 hover:text-white transition">
+          Login
+        </a>
+        <a href="/register"
+          class="text-sm px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-800 transition">
+          Register
+        </a>
+      </div>
+
+    </div>
+  </header>
 
 
 <!-- About Hero Section --><section class="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-300 text-white py-20">
@@ -35,3 +90,207 @@
     </p>
   </div>
 </section>
+
+  <!-- Our Mission and Values Section -->
+<section class="bg-blue-900 text-white py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Our Mission & Values</h2>
+      <p class="text-lg">At DavHowis Enterprise, we are guided by a set of core principles that shape everything we do.</p>
+    </div>
+
+    <!-- Mission and Values Cards -->
+    <div class="grid md:grid-cols-2 gap-10">
+      
+      <!-- Mission Card -->
+      <div class="bg-blue-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+        <p>
+          To create a synergistic economic opportunity that empowers individuals to achieve financial independence through quality business.
+          We strive to provide tools, training, and support services for our members to build entrepreneurial businesses while positively impacting their communities.
+        </p>
+      </div>
+
+      <!-- Values Card -->
+      <div class="bg-blue-800 p-8 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-6">Our Values</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span><strong>Integrity:</strong> We act with honesty and uphold the highest ethical standards.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span><strong>Quality:</strong> We deliver only the best products and services to our members.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span><strong>Community:</strong> We foster a supportive and empowering community environment.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span><strong>Innovation:</strong> We embrace creativity and strive for continuous improvement.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-400 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span><strong>Empowerment:</strong> We equip individuals with tools and confidence to succeed.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Network Structure & Earnings Section -->
+<section class="bg-gray-100 py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-blue-900 mb-4">Our Network Structure & Earnings</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        Our tiered system ensures that every member benefits from both direct and team-driven efforts. As your level rises, so do your earning potentials.
+      </p>
+    </div>
+
+    <!-- Tier Breakdown Table -->
+    <div class="overflow-x-auto mb-16">
+      <table class="w-full table-auto text-left bg-white rounded-lg shadow-lg overflow-hidden">
+        <thead class="bg-blue-900 text-white">
+          <tr>
+            <th class="py-3 px-4">S/N</th>
+            <th class="py-3 px-4">Tier</th>
+            <th class="py-3 px-4">Registration Fee (₦)</th>
+            <th class="py-3 px-4">Earning Depth (Levels)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-b">
+            <td class="py-3 px-4">1</td>
+            <td>Executive Platinum</td>
+            <td>100,000</td>
+            <td>10</td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-3 px-4">2</td>
+            <td>Platinum</td>
+            <td>50,000</td>
+            <td>10</td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-3 px-4">3</td>
+            <td>Diamond</td>
+            <td>40,000</td>
+            <td>9</td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-3 px-4">4</td>
+            <td>Gold</td>
+            <td>30,000</td>
+            <td>8</td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-3 px-4">5</td>
+            <td>Silver</td>
+            <td>20,000</td>
+            <td>7</td>
+          </tr>
+          <tr class="border-b">
+            <td class="py-3 px-4">6</td>
+            <td>Bronze</td>
+            <td>10,000</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4">7</td>
+            <td>Basic</td>
+            <td>5,000</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Earnings Breakdown -->
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Referral Bonuses -->
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-800 mb-4">Referral Bonus Structure</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li><strong>Direct Referral Bonus:</strong> 20% per referral</li>
+          <li><strong>Indirect Referral Bonus:</strong></li>
+          <ul class="ml-6 text-sm list-disc">
+            <li>Level 2 – 10%</li>
+            <li>Level 3 – 5%</li>
+            <li>Level 4 – 2.5%</li>
+            <li>Level 5 – 1.25%</li>
+            <li>Level 6 – 0.625%</li>
+            <li>Level 7 – 0.3125%</li>
+            <li>Level 8 – 0.15625%</li>
+            <li>Level 9 – 0.07812%</li>
+            <li>Level 10 – 0.01953%</li>
+          </ul>
+        </ul>
+      </div>
+
+      <!-- Other Commissions -->
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-800 mb-4">Other Earning Streams</h3>
+        <ul class="space-y-3 text-gray-700">
+          <li><strong>Product Sale Commission:</strong> Earn 2%–5% of product price</li>
+          <li><strong>Investment Returns:</strong> 2% monthly ROI</li>
+          <li><strong>Leadership Bonus:</strong> Performance-based bonuses</li>
+          <li><strong>Incentives:</strong> Periodic rewards for top achievers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Call to Action Section -->
+<section class="bg-blue-900 text-white py-16">
+  <div class="max-w-4xl mx-auto text-center px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Ready to Take the Next Step?
+    </h2>
+    <p class="text-lg md:text-xl mb-8">
+      Join the 4Wheel Enterprise today and unlock a world of opportunities through our powerful network marketing system.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/register.html" class="px-6 py-3 bg-white text-blue-900 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
+        Register Now
+      </a>
+      <a href="/shop.html" class="px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow hover:bg-blue-800 transition">
+        Explore Products
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-600">
+    &copy; 2025 DavHowis Enterprise. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for mobile nav toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
