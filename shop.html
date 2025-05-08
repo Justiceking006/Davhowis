@@ -64,7 +64,74 @@
   </div>
 </section>
 
+  <!-- Product Filter Section -->
+  <section class="bg-white py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row gap-8"><!-- Sidebar Category Tabs (Desktop) -->
+  <aside class="hidden md:block w-1/4">
+    <ul class="space-y-4">
+      <li><button class="category-tab text-left w-full text-blue-900 font-semibold" data-category="all">All Products</button></li>
+      <li><button class="category-tab text-left w-full" data-category="phones">Phones</button></li>
+      <li><button class="category-tab text-left w-full" data-category="solar">Solar Panels</button></li>
+      <li><button class="category-tab text-left w-full" data-category="electronics">Electronics</button></li>
+    </ul>
+  </aside>
 
+  <!-- Filter (Mobile) -->
+  <div class="block md:hidden mb-6">
+    <label for="category-select" class="block text-sm font-medium text-gray-700 mb-2">Filter by Category</label>
+    <select id="category-select" class="w-full border-gray-300 rounded-md">
+      <option value="all">All Products</option>
+      <option value="phones">Phones</option>
+      <option value="solar">Solar Panels</option>
+      <option value="electronics">Electronics</option>
+    </select>
+  </div>
+
+  <!-- Product Cards -->
+  <div class="w-full md:w-3/4 grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="product-container">
+
+    <!-- Phone Card -->
+    <div class="product-card" data-category="phones">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x200?text=Phone" alt="Phone" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-bold mb-2">Phones</h4>
+          <p class="text-sm mb-2">Latest smartphones with cutting-edge technology.</p>
+          <a href="#" class="text-blue-600 hover:underline">View Collection</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solar Card -->
+    <div class="product-card" data-category="solar">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x200?text=Solar+Panel" alt="Solar Panel" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-bold mb-2">Solar Panels</h4>
+          <p class="text-sm mb-2">Eco-friendly solar solutions for your home.</p>
+          <a href="#" class="text-blue-600 hover:underline">View Collection</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Electronics Card -->
+    <div class="product-card" data-category="electronics">
+      <div class="bg-white shadow rounded overflow-hidden">
+        <img src="https://via.placeholder.com/400x200?text=Electronics" alt="Electronics" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="text-lg font-bold mb-2">Electronics</h4>
+          <p class="text-sm mb-2">Innovative electronics that elevate your lifestyle.</p>
+          <a href="#" class="text-blue-600 hover:underline">View Collection</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</section>
   
   <!-- Footer Section -->
 <footer class="bg-gray-800 text-white py-12">
@@ -170,6 +237,39 @@
       navLinks.classList.toggle('hidden');
     });
   </script>
+
+
+<!-- JavaScript for Filtering -->
+  <script>
+  const tabs = document.querySelectorAll('.category-tab');
+  const select = document.getElementById('category-select');
+  const cards = document.querySelectorAll('.product-card');
+
+  function filterCards(category) {
+    cards.forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('text-blue-900', 'font-semibold'));
+      tab.classList.add('text-blue-900', 'font-semibold');
+      filterCards(tab.dataset.category);
+    });
+  });
+
+  select.addEventListener('change', () => {
+    filterCards(select.value);
+  });
+
+  // Default to show all
+  filterCards('all');
+</script>
 
 </body>
 </html>
